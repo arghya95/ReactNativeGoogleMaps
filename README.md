@@ -220,7 +220,7 @@ If you use Xcode with version less than 9 you may get `use of undeclared identif
 
 1. Set this Stylesheet in your map component
    ```
-   import MapView from 'react-native-maps';
+   import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
    ...
    const styles = StyleSheet.create({
      container: {
@@ -243,12 +243,13 @@ If you use Xcode with version less than 9 you may get `use of undeclared identif
        return (
          <View style ={styles.container}>
            <MapView
+             provider={PROVIDER_GOOGLE}
              style={styles.map}
              region={{
-               latitude: 37.78825,
-               longitude: -122.4324,
-               latitudeDelta: 0.015,
-               longitudeDelta: 0.0121,
+                latitude: 37.78825,
+                longitude: -122.4324,
+                latitudeDelta: 0.015,
+                longitudeDelta: 0.0121,
              }}
            >
            </MapView>
